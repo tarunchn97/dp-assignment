@@ -1,0 +1,187 @@
+/**
+ * News component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+.testimonials_wrapper {
+  background-color: #0f1922;
+  color: #fff;
+}
+
+.latest-news {
+  padding-block: 3.5rem;
+}
+.latest-news h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.latest-news h4 {
+  -webkit-margin-after: 2rem;
+  margin-block-end: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.latest-news .slick-arrow {
+  position: absolute;
+  top: -60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .latest-news .slick-arrow {
+    top: -95px;
+  }
+}
+.latest-news .slick-arrow svg {
+  fill: #fff;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: 0.3125rem;
+}
+.latest-news .slick-arrow.slick-prev {
+  left: unset;
+  right: 60px;
+}
+.latest-news .slick-arrow.slick-next {
+  right: 0;
+}
+.latest-news .slick-arrow.slick-next svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -0.3125rem;
+}
+.latest-news .slick-arrow::before {
+  display: none;
+}
+.latest-news .slick-arrow:hover {
+  background-color: #222b34;
+}
+.latest-news .slick-dots li {
+  margin: 0 0.3125rem;
+  padding: 0;
+  width: 0.3125rem;
+  height: 0.3125rem;
+}
+.latest-news .slick-dots li button {
+  padding: 0;
+  width: 0.3125rem;
+  height: 0.3125rem;
+}
+.latest-news .slick-dots li button::before {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  line-height: unset;
+  content: "";
+  background: #98928a;
+  border-radius: 50%;
+}
+.latest-news .slick-dots li.slick-active {
+  width: 1.5rem;
+}
+.latest-news .slick-dots li.slick-active button {
+  width: 1.5rem;
+}
+.latest-news .slick-dots li.slick-active button::before {
+  border-radius: 0.1875rem;
+  width: 1.5rem;
+  background-color: #6466f1;
+  opacity: 1;
+}
+.latest-news .news-cards {
+  padding-inline: unset;
+}
+.latest-news .news-cards .news-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  margin-block: 0 1rem;
+  margin-inline: 0.4375rem;
+}
+.latest-news__card {
+  background-color: #222b34;
+  color: #fff;
+}
+.latest-news__card-image img {
+  height: auto;
+}
+.latest-news__card-content {
+  padding: 64px 40px;
+  color: #fff;
+}
+.latest-news__card-tag {
+  margin: 0 0 0.75rem 0;
+}
+.latest-news__card-tag a {
+  text-decoration: none;
+  background-color: #f3f6ff;
+  color: #212121;
+  padding: 0.125rem 0.25rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+.latest-news__card-title {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+}
+.latest-news__card .doctor-profile__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  -webkit-margin-after: 1.5rem;
+  margin-block-end: 1.5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.latest-news__card .doctor-profile__card img {
+  width: 6.25rem;
+  height: 6.25rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.latest-news__card .doctor-profile__card-info {
+  display: grid;
+}
+.latest-news__card .doctor-profile__card-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 0.375rem 0;
+}
+.latest-news__card .doctor-profile__card-info p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #98928a;
+}
+/*# sourceMappingURL=news.css.map */

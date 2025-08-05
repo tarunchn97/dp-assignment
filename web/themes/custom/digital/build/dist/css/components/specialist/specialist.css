@@ -1,0 +1,64 @@
+/**
+ * Specialist component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+.our-specialist {
+  margin-block: 3.5rem;
+  -webkit-padding-before: 3.5rem;
+  padding-block-start: 3.5rem;
+}
+.our-specialist__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.our-specialist__header h2 {
+  font-size: 2.125rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 0;
+}
+.our-specialist .doctor-profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem 1rem;
+}
+.our-specialist .doctor-profiles .doctor-profile {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 calc(25% - 12px);
+  flex: 0 calc(25% - 12px);
+}
+.our-specialist .doctor-profiles .doctor-profile__card h3 {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #212121;
+  margin: 0.65rem 0;
+  text-align: center;
+}
+.our-specialist .doctor-profiles .doctor-profile__card p {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #98928a;
+  margin: 0;
+  text-align: center;
+}
+.our-specialist .doctor-profiles .doctor-profile__card img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  height: auto;
+  background-color: #f5f5ff;
+}
+/*# sourceMappingURL=specialist.css.map */

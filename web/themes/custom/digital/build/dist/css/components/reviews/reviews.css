@@ -1,0 +1,83 @@
+/**
+ * Review component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+.all-reviews {
+  margin-block: 3.125rem;
+  padding-block: 3.5rem;
+  background-color: #f4f6ff;
+}
+.all-reviews__title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 4.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #212121;
+}
+.all-reviews .review-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.all-reviews .review-card {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 calc(16.667% - 20px);
+  flex: 0 calc(16.667% - 20px);
+}
+.all-reviews .review-card__body {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: #98928a;
+  position: relative;
+}
+.all-reviews .review-card__body svg {
+  position: absolute;
+  top: -1.5625rem;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: #6466f1;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+}
+.all-reviews .review-card .doctor-profile__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+}
+.all-reviews .review-card .doctor-profile__card img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.25rem;
+}
+.all-reviews .review-card .doctor-profile__card-info {
+  display: grid;
+}
+.all-reviews .review-card .doctor-profile__card-info h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  color: #212121;
+  margin: 0 0 0.375rem 0;
+}
+.all-reviews .review-card .doctor-profile__card-info p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #98928a;
+}
+/*# sourceMappingURL=reviews.css.map */

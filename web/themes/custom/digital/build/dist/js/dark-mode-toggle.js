@@ -1,0 +1,1 @@
+!function(e){e.behaviors.darkModeToggle={attach:function(e,d){once("darkModeToggle","body",e).forEach(function(){const e=document.getElementById("dark-mode");e&&e.addEventListener("change",function(){e.checked?document.body.classList.add("dark-mode"):document.body.classList.remove("dark-mode")})})}}}(Drupal);

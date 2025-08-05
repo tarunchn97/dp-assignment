@@ -1,0 +1,157 @@
+/**
+ * header styling.
+ */
+@use "./node_modules/sass-rem" as rem;
+@import "../global-includes";
+
+header {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  position: absolute;
+}
+
+.is-loggedin {
+  header {
+    top: var(--drupal-displace-offset-top);
+  }
+}
+
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: rem.convert(8px);
+  z-index: 999;
+
+  .main-menu {
+    flex-grow: 1;
+  }
+
+  .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem.convert(32px);
+
+    nav {
+      ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: rem.convert(40px);
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0;
+          opacity: 0;
+        }
+
+        li {
+          color: $black;
+          padding-block: rem.convert(16px);
+
+          &:hover {
+            ul {
+              height: auto;
+              max-height: rem.convert(200px);
+              overflow-y: auto;
+              transition: max-height 0.3s ease-in-out;
+              z-index: 1;
+              color: $white;
+
+              li {
+                color: $white;
+                border-bottom: 1px solid $white;
+                padding: rem.convert(15px 20px);
+
+                a {
+                  color: $white;
+                }
+              }
+            }
+          }
+
+          ul {
+            position: absolute;
+            display: block;
+            background-color: $primary-color;
+            padding-block: 0;
+            top: rem.convert(48px);
+            height: 0;
+            max-height: 0;
+            transition: max-height 0.3s ease-in-out;
+            z-index: -1;
+            overflow: hidden;
+          }
+
+          &:last-child {
+            background-image: url("../../../../assets/images/search_icon.svg");
+            background-repeat: no-repeat;
+            width: 20px;
+            background-position: center;
+            cursor: pointer;
+          }
+        }
+
+        a {
+          font-size: 1.2;
+          font-weight: 400;
+          line-height: 1.2;
+          text-decoration: none;
+          color: $black;
+        }
+      }
+
+      .has-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #block-digital-site-branding {
+    @media (max-width: 768px) {
+      padding-block-start: 0.5rem;
+      align-self: flex-start;
+    }
+  }
+}
+
+// Mobile-first styles
+.menu-toggle {
+  display: none; // Visible on mobile
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  &__bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #212121;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    &:hover {
+      & + ul {
+        opacity: 1 !important;
+      }
+    }
+  }
+}

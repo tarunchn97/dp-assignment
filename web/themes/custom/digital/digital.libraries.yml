@@ -1,0 +1,109 @@
+digital:
+  version: VERSION
+  css:
+    base:
+      build/dist/css/global/base.css: { }
+      build/dist/css/global/typography.css: { }
+
+header:
+  css:
+    base:
+      build/dist/css/header/header.css: { }
+      build/dist/css/header/branding.css: { }
+      build/dist/css/header/account-menu.css: { }
+  js:
+    build/dist/js/dark-mode-toggle.js: { }
+
+  dependencies:
+    - core/drupal
+    - core/once
+
+hero-banner:
+  css:
+    base:
+      build/dist/css/components/hero-banner/hero-banner.css: { }
+
+icon-card:
+  css:
+    base:
+      build/dist/css/components/icon-card/icon-card.css: { }
+
+
+iframe-video:
+  css:
+    base:
+      build/dist/css/components/iframe-video/iframe-video.css: { }
+  
+  js:
+    build/dist/js/iframe-video.js: { }
+
+  dependencies:
+    - core/drupal
+    - core/once
+
+services:
+  css:
+    base:
+      build/dist/css/components/services/services.css: { }
+
+specialist:
+  css:
+    base:
+      build/dist/css/components/specialist/specialist.css: { }
+
+reviews:
+  css:
+    base:
+      build/dist/css/components/reviews/reviews.css: { }
+
+news:
+  css:
+    base:
+      build/dist/css/components/news/news.css: { }
+
+  js:
+    build/dist/js/news-slider.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - digital/slick
+
+featured-articles:
+  css:
+    base:
+      build/dist/css/components/featured-articles/featured-articles.css: { }
+
+  js:
+    build/dist/js/cta-carousel.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - digital/slick
+
+packages:
+  css:
+    base:
+      build/dist/css/components/packages/packages.css: { }
+
+contact-us:
+  css:
+    base:
+      build/dist/css/components/contact-us/contact-us.css: { }
+
+footer-bottom:
+  css:
+    base:
+      build/dist/css/footer/footer.css: { }
+
+
+slick:
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css: {external, defer: true}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css: {external, defer: true}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {external, defer: true}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

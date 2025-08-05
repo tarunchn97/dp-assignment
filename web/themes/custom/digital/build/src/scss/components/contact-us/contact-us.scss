@@ -1,0 +1,113 @@
+/**
+ * Featured Article component styling.
+ */
+@use "./node_modules/sass-rem" as rem;
+@import "../../global-includes";
+@import "../../global/buttons-links";
+
+#block-digital-contactus2 {
+  .contact-block {
+    position: relative;
+    color: $white;
+
+    .bg-img {
+      div {
+        height: 322px;
+      }
+
+      img {
+        width: 100%;
+        height: 322px;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1280px;
+      margin-inline: auto;
+
+      @media (max-width: 768px) {
+        top: 80px;
+        flex-direction: column;
+        max-width: 90%;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .meta {
+        h2 {
+          font-size: 2.25rem;
+          line-height: 1.2;
+          font-weight: 600;
+          margin-block-end: 0.5rem;
+        }
+        p {
+          font-size: 1.25rem;
+          line-height: 1.2;
+          font-weight: 400;
+          margin-block: unset;
+        }
+      }
+      .contact-block__form {
+        .form-group {
+          width: 100%;
+          max-width: 656px;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .contact-block__button {
+            position: absolute;
+            right: 1rem;
+            background-color: $black;
+            color: $white;
+            font-size: 1.25rem;
+            line-height: 1.4;
+            font-weight: 400;
+            margin-block: unset;
+          }
+        }
+        .form-input {
+          height: 82px;
+          width: 656px;
+          padding: 0.75rem;
+          border-radius: 4px;
+          font-size: 1rem;
+          transition: border-color 0.3s ease;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(2px); /* Safari support */
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          transition: all 0.3s ease;
+
+          @media (max-width: 768px) {
+            width: 320px;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: $black;
+            box-shadow: 0 0 0 2px rgba($medium-gray, 0.2);
+          }
+
+          &[aria-invalid="true"] {
+            border-color: red;
+          }
+
+          &::placeholder {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

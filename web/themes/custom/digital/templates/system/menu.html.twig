@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ */
+#}
+{% import _self as menus %}
+
+{# Main menu wrapper - will be toggled by the hamburger #}
+<div class="menu-wrapper">
+{# Mobile menu toggle button (hamburger) #}
+<button class="menu-toggle" aria-label="{{ 'Toggle menu'|t }}" aria-expanded="false">
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+</button>
+  {{ menus.menu_links(items, attributes, 0) }}
+</div>
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(['menu', 'menu-level-' ~ menu_level]) }}>
+    {% else %}
+      <ul class="menu menu-level-{{ menu_level }}">
+    {% endif %}
+    {% for item in items %}
+      {# Set menu item classes #}
+      {% set item_classes = ['menu__item'] %}
+      {% if item.below %}
+        {% set item_classes = item_classes|merge(['has-child']) %}
+      {% endif %}
+      {% if item.in_active_trail %}
+        {% set item_classes = item_classes|merge(['is-active-trail']) %}
+      {% endif %}
+      
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {{ link(item.title, item.url, {'class': ['menu__link']}) }}
+        
+        {# Add dropdown toggle for mobile #}
+        {% if item.below %}
+          <button class="menu__dropdown-toggle" aria-expanded="false" aria-label="{{ 'Toggle submenu'|t }}">
+            <svg class="menu__dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+          </button>
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

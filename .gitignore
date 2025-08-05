@@ -1,0 +1,50 @@
+# Ignore the private files directory.
+sites/*/files/private
+
+# Ignore uploaded files in the public directory.
+sites/*/files
+
+# Ignore compiled CSS and JS files.
+sites/*/files/css
+sites/*/files/js
+
+# Ignore the vendor directory created by Composer.
+/vendor/
+
+# Ignore the node_modules directory for local Node.js dependencies.
+/web/themes/custom/digital/node_modules/
+
+# Ignore globally installed Node.js modules.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore the Drupal scaffold files.
+/autoload.php
+/web/.htaccess
+/web/index.php
+/web/robots.txt
+/web/sites/development.services.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/sites/default/files/2024-08/
+/web/sites/default/files/php/
+/web/sites/default/files/sync/
+/web/sites/simpletest
+/web/modules/contrib/
+/web/profiles/README.txt
+/web/INSTALL.txt
+/web/UPDATE.txt
+/web/LICENSE.txt
+/web/web.config
+
+# Ignore Composer lock file, this can be committed if preferred.
+/composer.lock
+
+# Ignore backup and temporary files.
+*~
+*.swp
+.DS_Store
+Thumbs.db
+.idea/
+.phpunit.result.cache

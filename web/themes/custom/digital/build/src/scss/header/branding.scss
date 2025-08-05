@@ -1,0 +1,13 @@
+/**
+ * Branding component styling.
+ */
+@use './node_modules/sass-rem' as rem;
+@import "../global-includes";
+
+.site-header {
+  img {
+    // width: rem.convert(180px);
+    // max-width: rem.convert(180px);
+    height: auto;
+  }
+}

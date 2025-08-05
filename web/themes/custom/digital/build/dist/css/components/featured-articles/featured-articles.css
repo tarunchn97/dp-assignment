@@ -1,0 +1,333 @@
+/**
+ * Featured Article component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+a.btn,
+.btn,
+input[type=file],
+input[type=submit] {
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 12px 32px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+a.btn:active,
+a.btn:focus,
+a.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:hover,
+input[type=file]:active,
+input[type=file]:focus,
+input[type=file]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=submit]:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+a.btn.btn-small,
+.btn.btn-small,
+input[type=file].btn-small,
+input[type=submit].btn-small {
+  padding: 6px 14px;
+  font-size: 1rem;
+}
+a.btn.btn-secondary,
+.btn.btn-secondary,
+input[type=file].btn-secondary,
+input[type=submit].btn-secondary {
+  background-color: #22c55d;
+  color: #fff;
+  border: 2px solid #22c55d;
+}
+a.btn.btn-secondary:active,
+a.btn.btn-secondary:focus,
+a.btn.btn-secondary:hover,
+.btn.btn-secondary:active,
+.btn.btn-secondary:focus,
+.btn.btn-secondary:hover,
+input[type=file].btn-secondary:active,
+input[type=file].btn-secondary:focus,
+input[type=file].btn-secondary:hover,
+input[type=submit].btn-secondary:active,
+input[type=submit].btn-secondary:focus,
+input[type=submit].btn-secondary:hover {
+  text-decoration: none;
+  border: 2px solid #6466f1;
+  color: #fff;
+  background-color: #6466f1;
+}
+a.btn.btn-tertiary,
+.btn.btn-tertiary,
+input[type=file].btn-tertiary,
+input[type=submit].btn-tertiary {
+  background-color: #fff;
+  color: #6466f1;
+  border: 2px solid #6466f1;
+}
+a.btn.btn-tertiary:active,
+a.btn.btn-tertiary:focus,
+a.btn.btn-tertiary:hover,
+.btn.btn-tertiary:active,
+.btn.btn-tertiary:focus,
+.btn.btn-tertiary:hover,
+input[type=file].btn-tertiary:active,
+input[type=file].btn-tertiary:focus,
+input[type=file].btn-tertiary:hover,
+input[type=submit].btn-tertiary:active,
+input[type=submit].btn-tertiary:focus,
+input[type=submit].btn-tertiary:hover {
+  text-decoration: none;
+  border: 2px solid #6466f1;
+  color: #fff;
+  background-color: #6466f1;
+}
+a.btn.btn-tertiary:active svg,
+a.btn.btn-tertiary:focus svg,
+a.btn.btn-tertiary:hover svg,
+.btn.btn-tertiary:active svg,
+.btn.btn-tertiary:focus svg,
+.btn.btn-tertiary:hover svg,
+input[type=file].btn-tertiary:active svg,
+input[type=file].btn-tertiary:focus svg,
+input[type=file].btn-tertiary:hover svg,
+input[type=submit].btn-tertiary:active svg,
+input[type=submit].btn-tertiary:focus svg,
+input[type=submit].btn-tertiary:hover svg {
+  fill: #fff;
+}
+
+a {
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+@media (max-width: 47.99em) {
+  a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+  }
+}
+
+.featured-articles {
+  padding-inline: 5rem;
+  -webkit-padding-before: 3rem;
+  padding-block-start: 3rem;
+  -webkit-padding-after: 5rem;
+  padding-block-end: 5rem;
+}
+@media (max-width: 768px) {
+  .featured-articles {
+    padding-inline: 1rem;
+  }
+}
+.featured-articles_header-content {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .featured-articles_header-content {
+    padding-inline: 1.5rem;
+  }
+}
+.featured-articles_title {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  -webkit-margin-after: 0.8rem;
+  margin-block-end: 0.8rem;
+}
+.featured-articles_subtitle {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.featured-articles__wrappar {
+  background-color: #0f1922;
+  overflow-x: hidden;
+  padding-block: 7.5rem;
+}
+@media (max-width: 768px) {
+  .featured-articles__wrappar {
+    padding-block: 2.5rem;
+    -webkit-margin-before: -2px;
+    margin-block-start: -2px;
+  }
+}
+.featured-articles .slick-slide {
+  overflow-y: visible;
+}
+.featured-articles .slick-list {
+  overflow: hidden;
+}
+.featured-articles .slick-arrow {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  top: -65px;
+  right: 0;
+  -webkit-box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06), 0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .featured-articles .slick-arrow {
+    top: -105px;
+  }
+}
+.featured-articles .slick-arrow svg {
+  fill: #fff;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: 0.3125rem;
+}
+.featured-articles .slick-arrow.slick-prev {
+  left: unset;
+  right: 150px;
+}
+@media (max-width: 768px) {
+  .featured-articles .slick-arrow.slick-prev {
+    right: 100px;
+  }
+}
+.featured-articles .slick-arrow.slick-next {
+  left: unset;
+  right: 90px;
+}
+@media (max-width: 768px) {
+  .featured-articles .slick-arrow.slick-next {
+    right: 35px;
+  }
+}
+.featured-articles .slick-arrow.slick-next svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -0.3125rem;
+}
+.featured-articles .slick-arrow::before {
+  display: none;
+}
+.featured-articles .slick-arrow:hover {
+  background-color: gray;
+}
+.featured-articles .featured-article__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.featured-articles .featured-article__card-image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.featured-articles .featured-article__card-image img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 35rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.featured-articles .featured-article__card-image:hover .featured-article__card-text {
+  bottom: 24px;
+}
+.featured-articles .featured-article__card-text {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 41.6667%;
+  flex: 0 41.6667%;
+  margin-left: 18px;
+  position: absolute;
+  bottom: -100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.featured-articles .featured-article__card-text h3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+.featured-articles .featured-article__card-text p {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.featured-articles .slick-dots {
+  left: 0;
+  right: 0;
+}
+.featured-articles .slick-dots li button {
+  color: transparent;
+}
+.featured-articles .slick-dots li button:before {
+  color: #98928a;
+  opacity: 1;
+  font-size: 8px;
+}
+.featured-articles .slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+}
+/*# sourceMappingURL=featured-articles.css.map */

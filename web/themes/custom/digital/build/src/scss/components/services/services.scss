@@ -1,0 +1,105 @@
+/**
+ * Services component styling.
+ */
+@use './node_modules/sass-rem'as rem;
+@import "../../global-includes";
+
+.services-main-wrapper {
+	background: linear-gradient(180deg, rgba(15, 25, 34, 0) 0%, #0F1922 31.4%);
+	padding-block-end: 40px;
+}
+
+.services {
+  margin-block: 3.5rem;
+	padding-block-start: 3.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+
+	&-info {
+		flex: 1 33.3%;
+		align-self: center;
+
+		h2 {
+			font-size: 2.25rem;
+			line-height: 1.2;
+			margin-bottom: .5rem;
+			font-weight: 600;
+			color: $white;
+		}
+
+		h4.subheading {
+			font-size: 1.5rem;
+			line-height: 1.2;
+			margin-bottom: 2.4rem;
+			font-weight: 400;
+			color: $white;
+		}
+
+		p {
+			color: $white;
+			margin: 0 0 2.4rem 0;
+			font-size: 1.25;
+			font-weight: 400;
+			line-height: 1.6;
+			padding-inline-start: 1rem;
+			border-left: 3px solid #0097FF;
+		}
+		
+		.btn.btn-primary {
+			svg {
+				padding-inline-start: 5px;
+			}
+		}
+	}
+
+	&-card {
+		flex: 0 58.33%;
+		
+		@media (max-width: 768px) {
+			flex: 0 100%;
+		margin-block-end: 1.5rem;
+    }
+
+		.icon-cards {
+			padding: 0;
+			margin: 0;
+
+			.icon-card__wrappar {
+				align-items: flex-start;
+			}
+
+			.icon-card {
+				border: none;
+				// flex: 0 calc(50% - 16px);
+				// background-color: $primary-color-50;
+				// padding: rem.convert(24px);
+
+				&__image {
+					img {
+						// max-width: rem.convert(58px);
+						// min-width: rem.convert(58px);
+						// background: $white;
+						// padding: rem.convert(13px);
+						// border-radius: rem.convert(4px);
+					}
+				}
+
+				&__body {
+					padding-block: 0;
+
+					p {
+						margin-bottom: 1rem;
+						color: $medium-gray;
+						font-size: rem.convert(16px);
+						line-height: 1.2;
+					}
+
+					.btn {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}

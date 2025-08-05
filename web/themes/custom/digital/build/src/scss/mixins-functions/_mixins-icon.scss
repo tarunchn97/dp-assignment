@@ -1,0 +1,90 @@
+@use './node_modules/sass-rem' as rem;
+
+@mixin remix-icon(
+  $content,
+  $font-size: null,
+  $margin: null,
+  $rotate: null,
+  $hover_rotate: null,
+  $transdur: null,
+  $position: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+) {
+  &:after {
+    content: "#{$content}";
+    font-family: remixicon;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 0;
+
+    @if $font-size {
+      font-size: rem.convert($font-size);
+    }
+
+    @if $margin {
+      margin: $margin;
+    }
+
+    @if $rotate {
+      transform: rotate(#{$rotate}deg);
+    }
+
+    @if $transdur {
+      transition-duration: $transdur;
+    }
+
+    @if $position {
+      position: $position;
+    }
+
+    @if $top {
+      top: $top;
+    }
+
+    @if $right {
+      right: $right;
+    }
+
+    @if $bottom {
+      bottom: $bottom;
+    }
+
+    @if $left {
+      left: $left;
+    }
+  }
+
+  #{$a-tags-hover} {
+
+    &:after {
+      @if $hover_rotate {
+        transform: rotate(#{$hover_rotate}deg);
+      }
+    }
+  }
+}
+
+@mixin md-icon(
+  $content,
+  $font-size,
+  $color: null,
+  $rotate: null,
+) {
+  &:before {
+    content: "#{$content}";
+    font-family: 'Material Icons';
+    font-size: rem.convert($font-size);
+    display: inline-block;
+
+    @if $color {
+      color: $color;
+    }
+
+    @if $rotate {
+      transform: rotate(#{$rotate}deg);
+    }
+  }
+}

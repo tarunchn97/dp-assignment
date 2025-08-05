@@ -1,0 +1,100 @@
+/**
+ * Services component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+.services-main-wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 25, 34, 0)), color-stop(31.4%, #0f1922));
+  background: -o-linear-gradient(top, rgba(15, 25, 34, 0) 0%, #0f1922 31.4%);
+  background: linear-gradient(180deg, rgba(15, 25, 34, 0) 0%, #0f1922 31.4%);
+  -webkit-padding-after: 40px;
+  padding-block-end: 40px;
+}
+
+.services {
+  margin-block: 3.5rem;
+  -webkit-padding-before: 3.5rem;
+  padding-block-start: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+}
+.services-info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 33.3%;
+  flex: 1 33.3%;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.services-info h2 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.services-info h4.subheading {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+  font-weight: 400;
+  color: #fff;
+}
+.services-info p {
+  color: #fff;
+  margin: 0 0 2.4rem 0;
+  font-size: 1.25;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  border-left: 3px solid #0097ff;
+}
+.services-info .btn.btn-primary svg {
+  -webkit-padding-start: 5px;
+  padding-inline-start: 5px;
+}
+.services-card {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 58.33%;
+  flex: 0 58.33%;
+}
+@media (max-width: 768px) {
+  .services-card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 100%;
+    flex: 0 100%;
+    -webkit-margin-after: 1.5rem;
+    margin-block-end: 1.5rem;
+  }
+}
+.services-card .icon-cards {
+  padding: 0;
+  margin: 0;
+}
+.services-card .icon-cards .icon-card__wrappar {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.services-card .icon-cards .icon-card {
+  border: none;
+}
+.services-card .icon-cards .icon-card__body {
+  padding-block: 0;
+}
+.services-card .icon-cards .icon-card__body p {
+  margin-bottom: 1rem;
+  color: #98928a;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.services-card .icon-cards .icon-card__body .btn {
+  background-color: transparent;
+}
+/*# sourceMappingURL=services.css.map */

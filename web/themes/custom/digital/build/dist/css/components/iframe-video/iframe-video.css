@@ -1,0 +1,75 @@
+/**
+ * Iframe video component styling.
+ */
+/* stylelint-disable */
+/* stylelint-enable */
+.iframe-video {
+  margin-block: 3.125rem;
+  -webkit-padding-before: 3.5rem;
+  padding-block-start: 3.5rem;
+}
+.iframe-video h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.iframe-video__subtitle {
+  margin: 0 auto 2rem auto;
+  max-width: 31.25rem;
+  color: #98928a;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.iframe-video__iframe {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.iframe-video__iframe .iframe-gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.iframe-video__iframe .iframe-gradient.d-none {
+  display: none;
+}
+.iframe-video__iframe .iframe-gradient svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  padding: 1.875rem;
+  z-index: 2;
+  cursor: pointer;
+}
+.iframe-video__iframe .iframe-gradient::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.45;
+}
+.iframe-video iframe {
+  width: 100%;
+  height: 37.5rem;
+  position: relative;
+}
+/*# sourceMappingURL=iframe-video.css.map */

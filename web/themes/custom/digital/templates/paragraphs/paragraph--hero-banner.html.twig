@@ -1,0 +1,102 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('digital/hero-banner') }}
+{%
+  set classes = [
+    'paragraph',
+    'hero-banner',
+    'container',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {# <div class="left-container">
+        {% if content.field_title %}
+            <h1>{{ content.field_title.0 }}</h1>
+        {% endif %}
+
+        {% if content.field_subtitle %}
+            <h3>{{ content.field_subtitle.0 }}</h3>
+        {% endif %}
+
+        {% if content.field_body %}
+            {{ content.field_body.0|raw }}
+        {% endif %}
+    
+        {% if content.field_left_image %}
+            {{ content.field_left_image }}
+        {% endif %}
+      </div> #}
+
+      <div class="right-container">
+        <div class="right-container__featured">
+            {% if content.field_feature_box_title %}
+                <h2>{{ content.field_feature_box_title.0 }}</h2>
+            {% endif %}
+
+            {% if content.field_feature_box_body %}
+                {{ content.field_feature_box_body.0|raw }}
+            {% endif %}
+
+            {% if content.field_feature_box_cta %}
+                {% set button_text = content.field_feature_box_cta[0]['#title'] %}
+                {% set button_url = content.field_feature_box_cta[0]['#url'] %}
+                <a class="btn btn-tertiary btn-primary" href="{{ button_url }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 27 26" fill="none">
+                <path d="M5.87833 11.2858C7.91833 15.295 11.205 18.5675 15.2142 20.6217L18.3308 17.505C18.7133 17.1225 19.28 16.995 19.7758 17.165C21.3625 17.6892 23.0767 17.9725 24.8333 17.9725C25.6125 17.9725 26.25 18.61 26.25 19.3892V24.3333C26.25 25.1125 25.6125 25.75 24.8333 25.75C11.5308 25.75 0.75 14.9692 0.75 1.66667C0.75 0.8875 1.3875 0.25 2.16667 0.25H7.125C7.90417 0.25 8.54167 0.8875 8.54167 1.66667C8.54167 3.4375 8.825 5.1375 9.34917 6.72417C9.505 7.22 9.39167 7.7725 8.995 8.16917L5.87833 11.2858Z" fill="white"/>
+                </svg>
+                {{ button_text }}
+                </a>
+            {% endif %}
+        </div>
+
+        {% if content.field_right_image %}
+            {{ content.field_right_image }}
+        {% endif %}
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

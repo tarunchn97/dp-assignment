@@ -1,0 +1,36 @@
+$font-sans: sans-serif;
+
+
+$true-black: #000;
+$black: #212121;
+$medium-gray: #98928a;
+$white: #fff;
+$primary-color: #6466f1;
+$primary-color-100: #6366f1;
+$primary-color-50: #f4f6ff;
+$primary-color-00: #f3f6ff;
+$off-white-blue: #f5f5ff;
+$secondary-color: #22c55d;
+$light-periwinkle: #e3e5f1;
+
+// For usage with the container mixin.
+$small_desktop: 1024px;
+$desktop: 1280px;
+
+// Breakpoints.
+$breakpoints: (
+  small: 0,
+  mobile: 375px,
+  small_plus: 520px,
+  medium: 768px,
+  medium-large: 920px,
+  small_desktop: 1024px,
+  med_desktop: 1140px,
+  desktop: 1280px,
+  x_wide: 1440px,
+);
+
+// Uncomment to debug breakpoints.
+//$mq-show-breakpoints: (small, mobile, small_plus, medium, medium-large, small_desktop, desktop, x_wide);
+
+$a-tags-hover: '&:active, &:focus, &:hover ';
