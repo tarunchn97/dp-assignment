@@ -26,7 +26,7 @@ Before you begin, ensure you have the following installed:
    git clone https://github.com/tarunchn97/dp-assignment.git
 ```
   ```bash
-   cd drupal-design
+   cd dp-assignment
 ```
 
 2. **Start Ddev**
@@ -51,7 +51,7 @@ Before you begin, ensure you have the following installed:
 
 Import it using:
   ```bash
-   drush sql-cli < digital.sql
+   drush sql-cli < assignment_dp_latest.sql
 ```
 
 5. **Site snapshot**
