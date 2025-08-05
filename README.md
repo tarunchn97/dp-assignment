@@ -55,7 +55,7 @@ Import it using:
 ```
 
 5. **Site snapshot**
-<img src="https://github.com/gauravmahlawat/drupal-design/blob/main/homepage.png">
+<img src="https://github.com/tarunchn97/dp-assignment/blob/main/homepage.png">
 
 ## Running Gulp
 
@@ -100,7 +100,7 @@ The site has good performance and passes the core web vitals. Attached is the pe
 
 - **Performance Screenshot**
 
-  <img src="https://github.com/gauravmahlawat/drupal-design/blob/main/lighthouse.png">
+  <img src="https://github.com/tarunchn97/dp-assignment/blob/main/lighthouse.png">
 
 ## Troubleshooting
 
