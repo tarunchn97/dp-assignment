@@ -23,7 +23,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Project Repository**
 
   ```bash
-   git clone https://github.com/gauravmahlawat/drupal-design
+   git clone https://github.com/tarunchn97/dp-assignment.git
 ```
   ```bash
    cd drupal-design
