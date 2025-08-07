@@ -127,9 +127,8 @@
 		cursor: pointer;
 
         img {
-          border-radius: rem.convert(8px);
           width: 100%;
-          height: rem.convert(560px);
+          height: rem.convert(440px);
           object-fit: cover;
 		  transition: all .5s ease-in-out;
         }
