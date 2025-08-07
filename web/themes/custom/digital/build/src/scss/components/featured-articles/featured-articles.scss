@@ -9,43 +9,43 @@
   padding-inline: 5rem;
   padding-block-start: 3rem;
   padding-block-end: 5rem;
-  
+
   @media (max-width: 768px) {
-	  padding-inline: 1rem;
-    }
+    padding-inline: 1rem;
+  }
 
   &_header-content {
-	max-width: 1280px;
-	margin-inline: auto;
+    max-width: 1280px;
+    margin-inline: auto;
 
-	@media (max-width: 768px) {
+    @media (max-width: 768px) {
       padding-inline: 1.5rem;
     }
   }
 
   &_title {
-	color: $white;
-	font-size: 2.25rem;
-	font-weight: 600;
-	line-height: 1.4;
-	margin-block-end: 0.8rem;
+    color: $white;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-block-end: 0.8rem;
   }
 
   &_subtitle {
-	color: $white;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.2;
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
   }
 
   &__wrappar {
     background-color: #0f1922;
     overflow-x: hidden;
     padding-block: 7.5rem;
-	
-	@media (max-width: 768px) {
-		padding-block: 2.5rem;
-		margin-block-start: -2px;
+
+    @media (max-width: 768px) {
+      padding-block: 2.5rem;
+      margin-block-start: -2px;
     }
   }
 
@@ -65,15 +65,15 @@
     background-color: transparent;
     height: rem.convert(40px);
     width: rem.convert(40px);
-	border: 1px solid $white;
+    border: 1px solid $white;
     border-radius: 50%;
     top: -65px;
     right: 0;
     box-shadow: 0 0.275rem 0.75rem -0.0625rem rgba(11, 15, 25, 0.06),
       0 0.125rem 0.4rem -0.0625rem rgba(11, 15, 25, 0.03);
-	transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
-	@media (max-width: 768px) {
+    @media (max-width: 768px) {
       top: -105px;
     }
 
@@ -86,20 +86,20 @@
 
     &.slick-prev {
       left: unset;
-	  right: 150px;
+      right: 150px;
 
-	  @media (max-width: 768px) {
-      right: 100px;
-    }
+      @media (max-width: 768px) {
+        right: 100px;
+      }
     }
 
     &.slick-next {
       left: unset;
-	  right: 90px;
+      right: 90px;
 
-	  @media (max-width: 768px) {
-      right: 35px;
-    }
+      @media (max-width: 768px) {
+        right: 35px;
+      }
       svg {
         transform: rotate(180deg);
         margin-left: rem.convert(-5px);
@@ -110,43 +110,42 @@
       display: none;
     }
 
-	&:hover {
-		background-color: gray;
-	}
+    &:hover {
+      background-color: gray;
+    }
   }
 
   .featured-article {
-
     &__card {
       display: flex;
 
       &-image {
         // flex: 0 35.6667%;
-		position: relative;
-		overflow: hidden;
-		cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
 
         img {
           width: 100%;
           height: rem.convert(440px);
           object-fit: cover;
-		  transition: all .5s ease-in-out;
+          transition: all 0.5s ease-in-out;
         }
 
-		&:hover {
-			.featured-article__card-text {
-				bottom: 24px;
-			}
-		}
+        &:hover {
+          .featured-article__card-text {
+            bottom: 24px;
+          }
+        }
       }
 
       &-text {
         flex: 0 41.6667%;
         margin-left: 18px;
         // margin-top: rem.convert(70px);
-		position: absolute;
-		bottom: -100%;
-		transition: all .5s ease-in-out;
+        position: absolute;
+        bottom: -100%;
+        transition: all 0.5s ease-in-out;
 
         h3 {
           font-size: 1.8rem;
@@ -167,24 +166,22 @@
   }
 
   .slick-dots {
-	left: 0;
-	right: 0;
+    left: 0;
+    right: 0;
 
-	li button {
-	  color: transparent;
+    li button {
+      color: transparent;
 
-	  &:before {
-		color: $medium-gray;
-		opacity: 1;
-		font-size: 8px;
-	  }
-	}
+      &:before {
+        color: $medium-gray;
+        opacity: 1;
+        font-size: 8px;
+      }
+    }
 
-  
-	li.slick-active button:before {
-	  color: $white;
-	  opacity: 1;
-	}
+    li.slick-active button:before {
+      color: $white;
+      opacity: 1;
+    }
   }
 }
-
